@@ -92,17 +92,19 @@ main {
 
 section, aside {
 	overflow-y: scroll;
-	min-height: calc(100vh - 70px);
-	max-height: calc(100vh - 70px);
+	min-height: calc(100vh - 65px);
+	max-height: calc(100vh - 65px);
 	width: 100%;
 	height: 100%;
 }
 
 aside {
 	/*border-left: 2px solid var(--accent);*/
+	border-bottom: 2px solid var(--accent);
 	background-color: var(--dark);
 	color: white;
 	margin-right: -5px;
+	overflow-x: hidden;
 	width: auto;
 }
 
