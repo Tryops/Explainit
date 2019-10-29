@@ -43,6 +43,17 @@ document.querySelector("button#export").addEventListener("click", function(event
     }
 });
 
+let aside = document.querySelector("aside");
+let buttonAsideHide = document.createElement("button");
+buttonAsideHide.id = "aside-hide";
+buttonAsideHide.title = "Hide/show the 1000 most common english words";
+buttonAsideHide.innerHTML = "&#11208;";
+buttonAsideHide.addEventListener("click", function(event) {
+    aside.classList.toggle("hidden");
+    buttonAsideHide.innerHTML = aside.classList.contains("hidden") ? "&#11207;" : "&#11208;";
+});
+sectionEdit.prepend(buttonAsideHide);
+
 // function(event) {	// expand/collapse all (hide) -> if needed with button (toggle)...
 // 	for(let element in startEntry.querySelectorAll("ul")) {
 // 		ifNextSibling(bullet, function(sibling) {
@@ -54,6 +65,7 @@ document.querySelector("button#export").addEventListener("click", function(event
 
 function makeExportSection() {
     let sectionExport = document.querySelector("section#edit").cloneNode(true);
+    sectionExport.querySelector("button#aside-hide").remove();
     sectionExport.id = "export";
     sectionExport.classList.remove("hidden");
     sectionExport.querySelectorAll("ul").forEach(e => e.classList.remove("hidden")); // all explanations get exported, also hidden ones!
@@ -107,7 +119,7 @@ function getNewWords(text) {
     let remaining = uniqueTerms.filter(function(term) {
         term = term.toLowerCase();
         return !(headers.includes(term) || words.includes(term));
-    });
+    }).filter((term) => term != ""); // Prevent empty strings to show up in titles!
 
     return remaining;
 }
@@ -146,7 +158,7 @@ function newBullet(title) {
     input.value = title;
 
     let buttonAdd = document.createElement("button");
-    buttonAdd.innerHTML = "🞱";
+    buttonAdd.innerHTML = "&#128945;";	//🞱
     buttonAdd.classList.add("add");
     buttonAdd.title = "Add sub-explanations for new words";
     buttonAdd.addEventListener("click", function(event) {
@@ -159,7 +171,7 @@ function newBullet(title) {
     });
 
     let buttonHide = document.createElement("button");
-    buttonHide.innerHTML = "⯆";
+    buttonHide.innerHTML = "&#11206;";	//⯆
     buttonHide.classList.add("hide");
     buttonHide.title = "Expand/collapse sub-explanations";
     buttonHide.addEventListener("click", function(event) {
@@ -170,7 +182,7 @@ function newBullet(title) {
     });
 
     let buttonRemove = document.createElement("button");
-    buttonRemove.innerHTML = "🞪";
+    buttonRemove.innerHTML = "&#128938;";	//🞪
     buttonRemove.classList.add("remove");
     buttonRemove.title = "Remove this explanation and all of it's sub-explanations";
     buttonRemove.addEventListener("click", function(event) {
@@ -210,7 +222,6 @@ function blend(inOut, element, callbackFun) {
 }
 
 function selectText(node) {
-
     if (document.body.createTextRange) {
         const range = document.body.createTextRange();
         range.moveToElementText(node);

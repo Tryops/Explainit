@@ -254,6 +254,16 @@ button#copy {
 	border-radius: 5px;
 }
 
+button#aside-hide {
+	float: right;
+	clear: both;
+	margin-top: 10px;
+	border-right: none;
+	border-radius: 50% 0 0 50%;
+	transition: transform linear 1s;
+	animation: slide-left 0.3s ease;
+}
+
 .appear {
 	animation: slide-down 0.3s ease;
 }
@@ -264,6 +274,17 @@ button#copy {
 
 .hidden {
 	display: none;
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 0.125;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes slide-down {
