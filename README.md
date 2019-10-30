@@ -5,7 +5,7 @@
 <hr>
 
 # Explainit
->A website for describing complex things ... in simple words! 
+>A website for describing complex things ... in simple words! [Try it out!](https://tryops.github.io/explainit/)
 
 <img src="res/demo.png" width="500px"/>
 
@@ -57,13 +57,13 @@ When you are done, you can export your tree/list of explanations with the ¶-but
 <img src="res/word.png" width="600px"/>
 
 ## Inspiration
-Even though this tool might not be very practical, it might help to grasp the underlying concept of the power of abstraction, so, have fun!
+Even though this tool might not be very practical, it might help to grasp the underlying concept of the power of abstraction, so, [give it a try](https://tryops.github.io/explainit/) and have fun!
 
 This tool was inspired by the online list-outlining tools [Workflowy](https://workflowy.com) & [Dynalist](https://dynalist.io) and the book "[Thing Explainer](https://xkcd.com/thing-explainer/)" by Randall Munroe.
 Also, of course, by the concept of abstraction. 
 
-Created by Yannik Wailzer (2019)
+_Created by Yannik Wailzer (2019)_
 
-Written in plain HTML, CSS & JavaScript (no libraries used *)
+_Written in plain HTML, CSS & JavaScript (no libraries used *)_
 
 <sub>* now I know why people use JavaScript frameworks (doing animations the vanilla-way is hard!)...</sub>
