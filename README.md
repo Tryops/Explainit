@@ -38,9 +38,7 @@ Until you end up with explanations consisting only of these "atoms". Then the su
 With this process of explanation you end up with an explanation model of a subject in the form of a tree. 
 This is excactly what this webpage does, it generates you the tree (and it's proper indentation and formatting) based on your explanations. 
 For the most common words it uses a list of the [1000 Most Common English Words](https://1000mostcommonwords.com/1000-most-common-english-words/) which it checks against your words. 
-If they are not within the list, they must be explained further. Also, if a word has been explained, it can be used in every other explanation (globally). 
-
-<sub>Thus, also recursive explanations are possible (but not recommended). </sub>
+If they are not within the list, they must be explained further. Also, if a word has been explained, it can be used in every other explanation (globally). <sub>_Thus, also recursive explanations are possible (but not recommended)._</sub>
 
 On the page you are first prompted with two input fields, a title (the term you want to explain) and the explanation of the title. 
 - If you have your explanation set up, you can press the 🞱-button next to it and **evaluate** the explanation for uncommon/unexplained words 
