@@ -22,17 +22,17 @@ The twist is now to take this idea and apply it to language... the other way aro
 You take a concept (with a name) you know and would like to explain (e.g. to someone else or to yourself), this can be any concept/subject as abstract or complicated as you like. 
 Then you write it's name and the concept of it down with any terms you would like to use. 
 All terms which are too complex on their own need extra explanations themselves as well, so you take these terms and write, oh...
-You have the same routine again! SO how do you know when to stop explaining words? And how do you know which words are too complex for now?
+You have the same routine again! So how do you know when to stop explaining words? And how do you know which words are too complex for now?
 
 The approach is to stop when, for example, a child or a very average person could understand all the explanations of your "smallest" terms and could thus puzzle together the whole explanation based on these. 
 Words that everyone can understand will most certainly be the words everyone uses on a daily basis and thus the **most**. 
-The **most common words** of a language are the words everyone speaking that language should be familiar with (on average). These are out "atoms" of explanations. 
+The **most common words** of a language are the words everyone speaking that language should be familiar with (on average). These are our "atoms" for the explanations (of the concepts). 
 
 So, if a word 
-- can be explained with these "atoms" (the most common words), it can be understood, 
+- can be explained with these "atoms" _(the most common words)_, it can be understood, 
 - and if a word can't be explained only with these "atoms", the more complex terms that make up the explanation must themselves be explained with other words more clearly, and their explanations as well, and so on... 
 
-Until you end up with explanations consisting only of these "atoms". Then the subject is explained properly.  
+Until you end up with explanations consisting only of the "atoms" of the _most common words_. Then the subject can be explained/formalized _"properly"_ for anyone to understand.  
 
 ## The Page
 With this process of explanation you end up with an explanation model of a subject in the form of a tree. 
