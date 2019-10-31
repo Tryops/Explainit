@@ -13,10 +13,10 @@
 The idea of this webpage is based on a core concept which is often used in programming or maths (abstraction). 
 The idea is to group/define a specific concept as a set of "atomic" things under a specific term which you can then refer to/use in order to define other terms based on it. 
 Thus a concept must not be explained or defined directly in one turn, but can be split up into many sub-explanations 
-(and often you discover more properties of the explained subject in the process). 
+(and often you discover more properties of the explained subject in the process). This process is also called _"top-down"_- or _"bottom-up"_-method.
 
 This is basically also how functions or objects in many programming languages and also mathematical proofs work! 
-The twist is now to take this idea and apply it to language... the other way around! 
+The twist is now to take this idea and apply it to language... the other way around!
 
 ## The Concept
 You take a concept (with a name) you know and would like to explain (e.g. to someone else or to yourself), this can be any concept/subject as abstract or complicated as you like. 
