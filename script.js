@@ -9,12 +9,13 @@ let words = ['as', 'i', 'his', 'that', 'he', 'was', 'for', 'on', 'are', 'with', 
  * 				...in simple words!"
  */
 
-
+let globalTabIndex = 0;
 let mainList = document.querySelector("ul#main");
 let startEntry = newEntry("");
 startEntry.id = "start";
 mainList.appendChild(startEntry); // First entry point...
 document.querySelector("#start button.remove").remove(); // Remove the first only remove button of the entry point.
+document.querySelector("#start input").select(); // Select first input on start. 
 
 let wordList = document.querySelector("aside > ol#words");
 words.forEach(function(word) {
@@ -46,7 +47,7 @@ document.querySelector("button#export").addEventListener("click", function(event
 let aside = document.querySelector("aside");
 let buttonAsideHide = document.createElement("button");
 buttonAsideHide.id = "aside-hide";
-buttonAsideHide.title = "Hide/show the 1000 most common english words";
+buttonAsideHide.title = "Hide/show word list";
 buttonAsideHide.innerHTML = "&#11208;";
 buttonAsideHide.addEventListener("click", function(event) {
     aside.classList.toggle("hidden");
@@ -156,11 +157,13 @@ function newBullet(title) {
     let input = document.createElement("input");
     input.placeholder = "Title...";
     input.value = title;
+    input.tabIndex = globalTabIndex + 1;
 
     let buttonAdd = document.createElement("button");
     buttonAdd.innerHTML = "&#128945;";	//🞱
     buttonAdd.classList.add("add");
     buttonAdd.title = "Add sub-explanations for new words";
+    buttonAdd.tabIndex = globalTabIndex + 3;
     buttonAdd.addEventListener("click", function(event) {
         ifNextSibling(bullet, function(sibling) {
             blend(true, sibling, () => sibling.classList.remove("hidden"));
@@ -174,6 +177,7 @@ function newBullet(title) {
     buttonHide.innerHTML = "&#11206;";	//⯆
     buttonHide.classList.add("hide");
     buttonHide.title = "Expand/collapse sub-explanations";
+    buttonHide.tabIndex = globalTabIndex + 4;
     buttonHide.addEventListener("click", function(event) {
         ifNextSibling(bullet, function(sibling) {
             buttonHide.classList.toggle("rotate");
@@ -185,6 +189,7 @@ function newBullet(title) {
     buttonRemove.innerHTML = "&#128938;";	//🞪
     buttonRemove.classList.add("remove");
     buttonRemove.title = "Remove this explanation and all of it's sub-explanations";
+    buttonRemove.tabIndex = globalTabIndex + 5;
     buttonRemove.addEventListener("click", function(event) {
         //ifNextSibling(bullet, function(sibling) {
         blend(false, bullet.parentElement, () => bullet.parentElement.remove());
@@ -193,6 +198,7 @@ function newBullet(title) {
 
     let textarea = document.createElement("textarea");
     textarea.placeholder = "Text...";
+    textarea.tabIndex = globalTabIndex + 2;
     textarea.addEventListener("blur", function(event) { // To mark, if this field has new words. 
         if(getNewWords(textarea.value).length == 0) {
             buttonAdd.classList.remove("active");
@@ -208,6 +214,7 @@ function newBullet(title) {
     bullet.appendChild(buttonRemove);
     bullet.appendChild(document.createElement("br"));
     bullet.appendChild(textarea);
+    globalTabIndex += 5; // Number of total "tabable" elements. 
 
     return bullet;
 }

@@ -311,9 +311,16 @@ button#aside-hide {
 }
 
 
-@media only screen and (max-width: 700px) {
-	aside {
+@media only screen and (max-device-width : 768px) {
+	aside, button#aside-hide, div#claim, button#info {
 		display: none;
 	}
+
+	button#export {
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+	}
+
 }
 
